@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Defensive Stlats | Season 3 Stlats EDA</title>
+  <meta name="description" content="1 Defensive Stlats | Season 3 Stlats EDA" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Defensive Stlats | Season 3 Stlats EDA" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Defensive Stlats | Season 3 Stlats EDA" />
+  
+  
+  
+
+<meta name="author" content="TotallyLegitimateStatistics" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="defensive-stlats.html"><a href="defensive-stlats.html"><i class="fa fa-check"></i><b>1</b> Defensive Stlats</a><ul>
+<li class="chapter" data-level="1.1" data-path="defensive-stlats.html"><a href="defensive-stlats.html#general-distribution"><i class="fa fa-check"></i><b>1.1</b> General Distribution</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="defensive-stlats.html"><a href="defensive-stlats.html#season-3-pre-election"><i class="fa fa-check"></i><b>1.1.1</b> Season 3: Pre-Election</a></li>
+<li class="chapter" data-level="1.1.2" data-path="defensive-stlats.html"><a href="defensive-stlats.html#season-3-post-election"><i class="fa fa-check"></i><b>1.1.2</b> Season 3: Post-Election</a></li>
+<li class="chapter" data-level="1.1.3" data-path="defensive-stlats.html"><a href="defensive-stlats.html#the-difference"><i class="fa fa-check"></i><b>1.1.3</b> THE DIFFERENCE</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Season 3 Stlats EDA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="defensive-stlats" class="section level1">
+<h1><span class="header-section-number">1</span> Defensive Stlats</h1>
+<p>Our adventure begins with the defense. This is because [REDACTED].</p>
+<p>So… What are considered defensive stlats? Let’s make a list:</p>
+<ul>
+<li>anticapitalism</li>
+<li>chasiness</li>
+<li>omniscience</li>
+<li>tenacity</li>
+<li>watchfulness</li>
+</ul>
+<p>I’ll leave the definitions up to you. But I will count for you. That is five variables. Defense is a pentad. Each of these variables is very important, because blaseball <em>very</em> is important.</p>
+<div id="general-distribution" class="section level2">
+<h2><span class="header-section-number">1.1</span> General Distribution</h2>
+<p>Hello again! It has been so long since we last met. Do not let the heat get to you!</p>
+<p>Let’s start digging into these variables.</p>
+<div id="season-3-pre-election" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Season 3: Pre-Election</h3>
+<p>I’ve only got good data for season 3 on the data shelf. So we’ll cook with that. The spices in it are very nice.</p>
+<p>Let’s get some graphs. Because we can!</p>
+<p>Let’s start off with some basic summary statistics:</p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Stlat</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+<th align="right">Std. Dev.</th>
+<th align="right">CV</th>
+<th align="right">Skew</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">anticapitalism</td>
+<td align="right">0.4959219</td>
+<td align="right">0.4817769</td>
+<td align="right">0.2927142</td>
+<td align="right">0.5902426</td>
+<td align="right">0.1551667</td>
+</tr>
+<tr class="even">
+<td align="left">chasiness</td>
+<td align="right">0.5207366</td>
+<td align="right">0.5202670</td>
+<td align="right">0.2798555</td>
+<td align="right">0.5374224</td>
+<td align="right">-0.0088088</td>
+</tr>
+<tr class="odd">
+<td align="left">omniscience</td>
+<td align="right">0.4922804</td>
+<td align="right">0.4946862</td>
+<td align="right">0.3103572</td>
+<td align="right">0.6304480</td>
+<td align="right">0.0916586</td>
+</tr>
+<tr class="even">
+<td align="left">tenaciousness</td>
+<td align="right">0.5274485</td>
+<td align="right">0.5233301</td>
+<td align="right">0.2884562</td>
+<td align="right">0.5468899</td>
+<td align="right">0.0053958</td>
+</tr>
+<tr class="odd">
+<td align="left">watchfulness</td>
+<td align="right">0.4793531</td>
+<td align="right">0.4597488</td>
+<td align="right">0.2915361</td>
+<td align="right">0.6081865</td>
+<td align="right">0.1779279</td>
+</tr>
+</tbody>
+</table>
+<p>Well… Not much excitement here… They all have VERY similar distributions. I wonder if it’s like that with all these stlats boiling around in blaseball. We’ll find out on our adventure!</p>
+<p>Essentially, they all are centered at approximately 0.5, and they all have the same approximate spread. The skewness indicates that they are all symmetric too!</p>
+<p>Lets take a look!</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+If you haven’t seen these before. These are violin plots. For some reason, people decided that this is a good plot. I don’t really care but I’ll trust “those people” (whoever the hades they are). Basically, it is like a boxplot (if you don’t what that is… You should probably stop reading a chapter ago), but it has more detail. Wider parts mean more players have stlats in that range and skinnier parts mean fewer.</p>
+<p>What’d be cool is if there were some meaningful difference between the different stlats, but there isn’t much. You want some hypothesis test for that. Okay. I did it. There is a p-value or what not. It’s pretty small because large sample size. Anyway, I’ll save you the trouble. This is BORING.</p>
+<p>But wait… we have a lot of teams!</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Oh thank Hades. There’s a lot here, and I really don’t care about the teams, or the money, or the votes. Sure I chose the Tigers as my team, but I did that just because I like Tartarus. It’s a nice place.</p>
+<p>Anyway, you can compare the teams. There’s a lot of differences. or similarities or whatever. Check out Dale[ACCENT ERROR], they are boring. It’s all the same. But the Firefights… Look at that chasiness. It’s so dreamy.</p>
+<p>Look at it whatever.</p>
+<p>Here are the numbers…</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">team</th>
+<th align="left">Stlat</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+<th align="right">Std. Dev.</th>
+<th align="right">CV</th>
+<th align="right">Skew</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4627438</td>
+<td align="right">0.4657024</td>
+<td align="right">0.3289517</td>
+<td align="right">0.7108721</td>
+<td align="right">0.0604500</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">chasiness</td>
+<td align="right">0.3768264</td>
+<td align="right">0.3295325</td>
+<td align="right">0.3204211</td>
+<td align="right">0.8503147</td>
+<td align="right">0.5993580</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">omniscience</td>
+<td align="right">0.3537627</td>
+<td align="right">0.2683630</td>
+<td align="right">0.3280403</td>
+<td align="right">0.9272891</td>
+<td align="right">0.5160515</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5126339</td>
+<td align="right">0.4799804</td>
+<td align="right">0.2726546</td>
+<td align="right">0.5318700</td>
+<td align="right">0.1673924</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4905436</td>
+<td align="right">0.5698160</td>
+<td align="right">0.2866478</td>
+<td align="right">0.5843472</td>
+<td align="right">-0.2992189</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5865952</td>
+<td align="right">0.6370388</td>
+<td align="right">0.2837951</td>
+<td align="right">0.4838005</td>
+<td align="right">-0.1431542</td>
+</tr>
+<tr class="odd">
+<td align="left">Crabs</td>
+<td align="left">chasiness</td>
+<td align="right">0.5301729</td>
+<td align="right">0.5242458</td>
+<td align="right">0.1526183</td>
+<td align="right">0.2878652</td>
+<td align="right">-0.4743889</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">omniscience</td>
+<td align="right">0.6473348</td>
+<td align="right">0.7073562</td>
+<td align="right">0.3884678</td>
+<td align="right">0.6001033</td>
+<td align="right">-0.1469466</td>
+</tr>
+<tr class="odd">
+<td align="left">Crabs</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5829373</td>
+<td align="right">0.5044924</td>
+<td align="right">0.3685620</td>
+<td align="right">0.6322499</td>
+<td align="right">0.0272157</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5234717</td>
+<td align="right">0.5166114</td>
+<td align="right">0.2841827</td>
+<td align="right">0.5428806</td>
+<td align="right">0.0058625</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3731316</td>
+<td align="right">0.3387787</td>
+<td align="right">0.2478423</td>
+<td align="right">0.6642223</td>
+<td align="right">0.1372807</td>
+</tr>
+<tr class="even">
+<td align="left">Dale</td>
+<td align="left">chasiness</td>
+<td align="right">0.4250536</td>
+<td align="right">0.4315548</td>
+<td align="right">0.2621973</td>
+<td align="right">0.6168570</td>
+<td align="right">-0.0766962</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">omniscience</td>
+<td align="right">0.4214213</td>
+<td align="right">0.3973689</td>
+<td align="right">0.3059891</td>
+<td align="right">0.7260884</td>
+<td align="right">0.2438656</td>
+</tr>
+<tr class="even">
+<td align="left">Dale</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4559173</td>
+<td align="right">0.4234648</td>
+<td align="right">0.2722345</td>
+<td align="right">0.5971138</td>
+<td align="right">0.2469650</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4837035</td>
+<td align="right">0.5221185</td>
+<td align="right">0.3569923</td>
+<td align="right">0.7380396</td>
+<td align="right">-0.1010190</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4517997</td>
+<td align="right">0.4432632</td>
+<td align="right">0.3011648</td>
+<td align="right">0.6665892</td>
+<td align="right">0.0502458</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">chasiness</td>
+<td align="right">0.5804227</td>
+<td align="right">0.6156040</td>
+<td align="right">0.2440119</td>
+<td align="right">0.4204038</td>
+<td align="right">-0.5321613</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">omniscience</td>
+<td align="right">0.4261869</td>
+<td align="right">0.3561045</td>
+<td align="right">0.3129745</td>
+<td align="right">0.7343598</td>
+<td align="right">0.4106341</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5447445</td>
+<td align="right">0.5667437</td>
+<td align="right">0.3016215</td>
+<td align="right">0.5536935</td>
+<td align="right">-0.1505008</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4018940</td>
+<td align="right">0.3898984</td>
+<td align="right">0.1947373</td>
+<td align="right">0.4845489</td>
+<td align="right">0.0304242</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4628304</td>
+<td align="right">0.3649425</td>
+<td align="right">0.2507988</td>
+<td align="right">0.5418805</td>
+<td align="right">0.2458171</td>
+</tr>
+<tr class="even">
+<td align="left">Flowers</td>
+<td align="left">chasiness</td>
+<td align="right">0.4408037</td>
+<td align="right">0.3739497</td>
+<td align="right">0.2573872</td>
+<td align="right">0.5839044</td>
+<td align="right">0.8940105</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">omniscience</td>
+<td align="right">0.5774146</td>
+<td align="right">0.6222510</td>
+<td align="right">0.2749845</td>
+<td align="right">0.4762340</td>
+<td align="right">-0.3323041</td>
+</tr>
+<tr class="even">
+<td align="left">Flowers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4737641</td>
+<td align="right">0.4445346</td>
+<td align="right">0.3443009</td>
+<td align="right">0.7267349</td>
+<td align="right">0.0459455</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4522328</td>
+<td align="right">0.4441844</td>
+<td align="right">0.3199718</td>
+<td align="right">0.7075379</td>
+<td align="right">0.2529272</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5101125</td>
+<td align="right">0.5153098</td>
+<td align="right">0.2458238</td>
+<td align="right">0.4819012</td>
+<td align="right">-0.0310397</td>
+</tr>
+<tr class="odd">
+<td align="left">Fridays</td>
+<td align="left">chasiness</td>
+<td align="right">0.4105390</td>
+<td align="right">0.3243951</td>
+<td align="right">0.3231506</td>
+<td align="right">0.7871374</td>
+<td align="right">0.4970563</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">omniscience</td>
+<td align="right">0.4339885</td>
+<td align="right">0.4851602</td>
+<td align="right">0.2959862</td>
+<td align="right">0.6820137</td>
+<td align="right">0.0051201</td>
+</tr>
+<tr class="odd">
+<td align="left">Fridays</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5155130</td>
+<td align="right">0.4256691</td>
+<td align="right">0.2900275</td>
+<td align="right">0.5625997</td>
+<td align="right">0.4284760</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4500983</td>
+<td align="right">0.3641108</td>
+<td align="right">0.3108673</td>
+<td align="right">0.6906655</td>
+<td align="right">0.3023248</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4240209</td>
+<td align="right">0.4508044</td>
+<td align="right">0.2884726</td>
+<td align="right">0.6803262</td>
+<td align="right">0.0314172</td>
+</tr>
+<tr class="even">
+<td align="left">Garages</td>
+<td align="left">chasiness</td>
+<td align="right">0.4973159</td>
+<td align="right">0.5369407</td>
+<td align="right">0.2679212</td>
+<td align="right">0.5387345</td>
+<td align="right">-0.1394636</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">omniscience</td>
+<td align="right">0.5645431</td>
+<td align="right">0.5399343</td>
+<td align="right">0.3300986</td>
+<td align="right">0.5847181</td>
+<td align="right">-0.0444719</td>
+</tr>
+<tr class="even">
+<td align="left">Garages</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4963738</td>
+<td align="right">0.4365298</td>
+<td align="right">0.3186250</td>
+<td align="right">0.6419053</td>
+<td align="right">0.0885326</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4765438</td>
+<td align="right">0.4236365</td>
+<td align="right">0.3098236</td>
+<td align="right">0.6501473</td>
+<td align="right">0.1750700</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3857681</td>
+<td align="right">0.3308927</td>
+<td align="right">0.2805922</td>
+<td align="right">0.7273597</td>
+<td align="right">0.5206113</td>
+</tr>
+<tr class="odd">
+<td align="left">Jazz Hands</td>
+<td align="left">chasiness</td>
+<td align="right">0.6251920</td>
+<td align="right">0.7264935</td>
+<td align="right">0.2792008</td>
+<td align="right">0.4465840</td>
+<td align="right">-0.6930604</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">omniscience</td>
+<td align="right">0.4390531</td>
+<td align="right">0.4497790</td>
+<td align="right">0.3634437</td>
+<td align="right">0.8277899</td>
+<td align="right">0.0170892</td>
+</tr>
+<tr class="odd">
+<td align="left">Jazz Hands</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5378237</td>
+<td align="right">0.5568637</td>
+<td align="right">0.2686430</td>
+<td align="right">0.4995001</td>
+<td align="right">-0.2166518</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5154483</td>
+<td align="right">0.5500311</td>
+<td align="right">0.2102776</td>
+<td align="right">0.4079509</td>
+<td align="right">-0.6880679</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5661568</td>
+<td align="right">0.5932398</td>
+<td align="right">0.2511247</td>
+<td align="right">0.4435603</td>
+<td align="right">-0.1077985</td>
+</tr>
+<tr class="even">
+<td align="left">Lovers</td>
+<td align="left">chasiness</td>
+<td align="right">0.5588600</td>
+<td align="right">0.5177308</td>
+<td align="right">0.2758491</td>
+<td align="right">0.4935925</td>
+<td align="right">-0.0456296</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">omniscience</td>
+<td align="right">0.5490002</td>
+<td align="right">0.5346924</td>
+<td align="right">0.3172285</td>
+<td align="right">0.5778295</td>
+<td align="right">0.1759853</td>
+</tr>
+<tr class="even">
+<td align="left">Lovers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6284434</td>
+<td align="right">0.7236178</td>
+<td align="right">0.3426001</td>
+<td align="right">0.5451566</td>
+<td align="right">-0.6960243</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5049051</td>
+<td align="right">0.4398743</td>
+<td align="right">0.2536488</td>
+<td align="right">0.5023692</td>
+<td align="right">0.5289100</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.6026119</td>
+<td align="right">0.6521560</td>
+<td align="right">0.2745343</td>
+<td align="right">0.4555740</td>
+<td align="right">-0.3964286</td>
+</tr>
+<tr class="odd">
+<td align="left">Magic</td>
+<td align="left">chasiness</td>
+<td align="right">0.5443875</td>
+<td align="right">0.5374024</td>
+<td align="right">0.2821661</td>
+<td align="right">0.5183185</td>
+<td align="right">0.0284304</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">omniscience</td>
+<td align="right">0.4467380</td>
+<td align="right">0.4379017</td>
+<td align="right">0.2791912</td>
+<td align="right">0.6249551</td>
+<td align="right">0.0041282</td>
+</tr>
+<tr class="odd">
+<td align="left">Magic</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5838722</td>
+<td align="right">0.6676153</td>
+<td align="right">0.2641354</td>
+<td align="right">0.4523857</td>
+<td align="right">-0.2452459</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">watchfulness</td>
+<td align="right">0.6008025</td>
+<td align="right">0.6662076</td>
+<td align="right">0.2761483</td>
+<td align="right">0.4596325</td>
+<td align="right">-0.5372048</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5063591</td>
+<td align="right">0.4795331</td>
+<td align="right">0.3182283</td>
+<td align="right">0.6284637</td>
+<td align="right">0.5765196</td>
+</tr>
+<tr class="even">
+<td align="left">Millennials</td>
+<td align="left">chasiness</td>
+<td align="right">0.6661085</td>
+<td align="right">0.7897462</td>
+<td align="right">0.2799834</td>
+<td align="right">0.4203269</td>
+<td align="right">-0.8175586</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">omniscience</td>
+<td align="right">0.3731118</td>
+<td align="right">0.3073098</td>
+<td align="right">0.3052185</td>
+<td align="right">0.8180351</td>
+<td align="right">0.6809273</td>
+</tr>
+<tr class="even">
+<td align="left">Millennials</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6142675</td>
+<td align="right">0.7106785</td>
+<td align="right">0.3286062</td>
+<td align="right">0.5349562</td>
+<td align="right">-0.4837472</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4614770</td>
+<td align="right">0.4664855</td>
+<td align="right">0.3432358</td>
+<td align="right">0.7437766</td>
+<td align="right">0.0608211</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3851771</td>
+<td align="right">0.2031867</td>
+<td align="right">0.3235668</td>
+<td align="right">0.8400468</td>
+<td align="right">0.7033105</td>
+</tr>
+<tr class="odd">
+<td align="left">Moist Talkers</td>
+<td align="left">chasiness</td>
+<td align="right">0.6294982</td>
+<td align="right">0.6054889</td>
+<td align="right">0.2884321</td>
+<td align="right">0.4581936</td>
+<td align="right">-0.1216490</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">omniscience</td>
+<td align="right">0.4023112</td>
+<td align="right">0.3976413</td>
+<td align="right">0.2937358</td>
+<td align="right">0.7301210</td>
+<td align="right">-0.0132128</td>
+</tr>
+<tr class="odd">
+<td align="left">Moist Talkers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6484181</td>
+<td align="right">0.6367718</td>
+<td align="right">0.2797679</td>
+<td align="right">0.4314621</td>
+<td align="right">-0.3910551</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4495096</td>
+<td align="right">0.4848952</td>
+<td align="right">0.2712156</td>
+<td align="right">0.6033589</td>
+<td align="right">0.2602166</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.7546549</td>
+<td align="right">0.8273789</td>
+<td align="right">0.3114611</td>
+<td align="right">0.4127199</td>
+<td align="right">-0.2988399</td>
+</tr>
+<tr class="even">
+<td align="left">Pies</td>
+<td align="left">chasiness</td>
+<td align="right">0.7404004</td>
+<td align="right">0.7395118</td>
+<td align="right">0.2725409</td>
+<td align="right">0.3680993</td>
+<td align="right">-0.0188648</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">omniscience</td>
+<td align="right">0.6283096</td>
+<td align="right">0.6175095</td>
+<td align="right">0.3321759</td>
+<td align="right">0.5286818</td>
+<td align="right">0.1020152</td>
+</tr>
+<tr class="even">
+<td align="left">Pies</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5978504</td>
+<td align="right">0.5881310</td>
+<td align="right">0.2383529</td>
+<td align="right">0.3986832</td>
+<td align="right">0.4191913</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">watchfulness</td>
+<td align="right">0.6591560</td>
+<td align="right">0.7234512</td>
+<td align="right">0.3156489</td>
+<td align="right">0.4788682</td>
+<td align="right">-0.0966565</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4192364</td>
+<td align="right">0.3163904</td>
+<td align="right">0.3093897</td>
+<td align="right">0.7379837</td>
+<td align="right">0.5214326</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoe Thieves</td>
+<td align="left">chasiness</td>
+<td align="right">0.5404362</td>
+<td align="right">0.5315368</td>
+<td align="right">0.2542957</td>
+<td align="right">0.4705378</td>
+<td align="right">0.1039233</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">omniscience</td>
+<td align="right">0.4660923</td>
+<td align="right">0.4946322</td>
+<td align="right">0.2717837</td>
+<td align="right">0.5831113</td>
+<td align="right">-0.0600397</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoe Thieves</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5178678</td>
+<td align="right">0.5531788</td>
+<td align="right">0.2710612</td>
+<td align="right">0.5234177</td>
+<td align="right">0.1391021</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4591609</td>
+<td align="right">0.3517944</td>
+<td align="right">0.3504286</td>
+<td align="right">0.7631935</td>
+<td align="right">0.5466318</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4459065</td>
+<td align="right">0.3563817</td>
+<td align="right">0.2808998</td>
+<td align="right">0.6299521</td>
+<td align="right">0.2842880</td>
+</tr>
+<tr class="even">
+<td align="left">Spies</td>
+<td align="left">chasiness</td>
+<td align="right">0.5402405</td>
+<td align="right">0.5850106</td>
+<td align="right">0.3180797</td>
+<td align="right">0.5887743</td>
+<td align="right">-0.3219896</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">omniscience</td>
+<td align="right">0.5032657</td>
+<td align="right">0.5669464</td>
+<td align="right">0.2489390</td>
+<td align="right">0.4946472</td>
+<td align="right">-0.3226793</td>
+</tr>
+<tr class="even">
+<td align="left">Spies</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4830830</td>
+<td align="right">0.4588452</td>
+<td align="right">0.2388535</td>
+<td align="right">0.4944357</td>
+<td align="right">-0.0606855</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">watchfulness</td>
+<td align="right">0.3474177</td>
+<td align="right">0.2556443</td>
+<td align="right">0.3070008</td>
+<td align="right">0.8836648</td>
+<td align="right">0.3012475</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5029395</td>
+<td align="right">0.4692780</td>
+<td align="right">0.2867820</td>
+<td align="right">0.5702118</td>
+<td align="right">0.0996679</td>
+</tr>
+<tr class="odd">
+<td align="left">Steaks</td>
+<td align="left">chasiness</td>
+<td align="right">0.5607392</td>
+<td align="right">0.5765053</td>
+<td align="right">0.2745817</td>
+<td align="right">0.4896780</td>
+<td align="right">-0.5497725</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">omniscience</td>
+<td align="right">0.6524358</td>
+<td align="right">0.8418075</td>
+<td align="right">0.3378799</td>
+<td align="right">0.5178746</td>
+<td align="right">-0.6812493</td>
+</tr>
+<tr class="odd">
+<td align="left">Steaks</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4950491</td>
+<td align="right">0.4934436</td>
+<td align="right">0.3291055</td>
+<td align="right">0.6647937</td>
+<td align="right">0.3091583</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">watchfulness</td>
+<td align="right">0.3843145</td>
+<td align="right">0.3277542</td>
+<td align="right">0.2881429</td>
+<td align="right">0.7497581</td>
+<td align="right">0.4326161</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4959079</td>
+<td align="right">0.3472951</td>
+<td align="right">0.3195875</td>
+<td align="right">0.6444494</td>
+<td align="right">0.1877864</td>
+</tr>
+<tr class="even">
+<td align="left">Sunbeams</td>
+<td align="left">chasiness</td>
+<td align="right">0.4541614</td>
+<td align="right">0.4491326</td>
+<td align="right">0.1913404</td>
+<td align="right">0.4213049</td>
+<td align="right">0.2774299</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">omniscience</td>
+<td align="right">0.4951642</td>
+<td align="right">0.4633976</td>
+<td align="right">0.3425742</td>
+<td align="right">0.6918396</td>
+<td align="right">0.0631101</td>
+</tr>
+<tr class="even">
+<td align="left">Sunbeams</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5252013</td>
+<td align="right">0.5056566</td>
+<td align="right">0.2547300</td>
+<td align="right">0.4850141</td>
+<td align="right">0.1761893</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5551209</td>
+<td align="right">0.4982756</td>
+<td align="right">0.3298833</td>
+<td align="right">0.5942549</td>
+<td align="right">0.1329672</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3922257</td>
+<td align="right">0.3847157</td>
+<td align="right">0.2730325</td>
+<td align="right">0.6961107</td>
+<td align="right">0.1708833</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">chasiness</td>
+<td align="right">0.3329606</td>
+<td align="right">0.2269368</td>
+<td align="right">0.2729953</td>
+<td align="right">0.8199027</td>
+<td align="right">0.7659452</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">omniscience</td>
+<td align="right">0.5059029</td>
+<td align="right">0.5330355</td>
+<td align="right">0.2673339</td>
+<td align="right">0.5284292</td>
+<td align="right">-0.5178149</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5025965</td>
+<td align="right">0.5073152</td>
+<td align="right">0.3224187</td>
+<td align="right">0.6415061</td>
+<td align="right">-0.2242328</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4107530</td>
+<td align="right">0.4112978</td>
+<td align="right">0.2228577</td>
+<td align="right">0.5425589</td>
+<td align="right">0.0588774</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5599191</td>
+<td align="right">0.5127639</td>
+<td align="right">0.2274826</td>
+<td align="right">0.4062777</td>
+<td align="right">0.2320806</td>
+</tr>
+<tr class="even">
+<td align="left">Tigers</td>
+<td align="left">chasiness</td>
+<td align="right">0.4709423</td>
+<td align="right">0.5423329</td>
+<td align="right">0.2370573</td>
+<td align="right">0.5033681</td>
+<td align="right">-0.2762458</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">omniscience</td>
+<td align="right">0.4210158</td>
+<td align="right">0.4362219</td>
+<td align="right">0.1873253</td>
+<td align="right">0.4449365</td>
+<td align="right">0.0745264</td>
+</tr>
+<tr class="even">
+<td align="left">Tigers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.3603748</td>
+<td align="right">0.3303539</td>
+<td align="right">0.1750273</td>
+<td align="right">0.4856812</td>
+<td align="right">0.2191015</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5074445</td>
+<td align="right">0.4055595</td>
+<td align="right">0.2909860</td>
+<td align="right">0.5734341</td>
+<td align="right">0.3715548</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.6303408</td>
+<td align="right">0.7101705</td>
+<td align="right">0.3001300</td>
+<td align="right">0.4761393</td>
+<td align="right">-0.6091481</td>
+</tr>
+<tr class="odd">
+<td align="left">Wild Wings</td>
+<td align="left">chasiness</td>
+<td align="right">0.4896707</td>
+<td align="right">0.4591720</td>
+<td align="right">0.3146680</td>
+<td align="right">0.6426114</td>
+<td align="right">0.1216734</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">omniscience</td>
+<td align="right">0.5385562</td>
+<td align="right">0.6257964</td>
+<td align="right">0.3280785</td>
+<td align="right">0.6091815</td>
+<td align="right">-0.2132406</td>
+</tr>
+<tr class="odd">
+<td align="left">Wild Wings</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4722375</td>
+<td align="right">0.5140176</td>
+<td align="right">0.2661355</td>
+<td align="right">0.5635629</td>
+<td align="right">-0.3192785</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4530643</td>
+<td align="right">0.4127228</td>
+<td align="right">0.2746418</td>
+<td align="right">0.6061872</td>
+<td align="right">0.3249747</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="season-3-post-election" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Season 3: Post-Election</h3>
+<p>Welp… I guess we can run through the same stuff for post-election results. It’ll probably be more important to show what’s changed…. But whatever. We’ll do that in a hot minute.</p>
+<p>SUMMARY STATISTICS AGAIN</p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Stlat</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+<th align="right">Std. Dev.</th>
+<th align="right">CV</th>
+<th align="right">Skew</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">anticapitalism</td>
+<td align="right">0.4959219</td>
+<td align="right">0.4817769</td>
+<td align="right">0.2927142</td>
+<td align="right">0.5902426</td>
+<td align="right">0.1551667</td>
+</tr>
+<tr class="even">
+<td align="left">chasiness</td>
+<td align="right">0.5207366</td>
+<td align="right">0.5202670</td>
+<td align="right">0.2798555</td>
+<td align="right">0.5374224</td>
+<td align="right">-0.0088088</td>
+</tr>
+<tr class="odd">
+<td align="left">omniscience</td>
+<td align="right">0.4922804</td>
+<td align="right">0.4946862</td>
+<td align="right">0.3103572</td>
+<td align="right">0.6304480</td>
+<td align="right">0.0916586</td>
+</tr>
+<tr class="even">
+<td align="left">tenaciousness</td>
+<td align="right">0.5274485</td>
+<td align="right">0.5233301</td>
+<td align="right">0.2884562</td>
+<td align="right">0.5468899</td>
+<td align="right">0.0053958</td>
+</tr>
+<tr class="odd">
+<td align="left">watchfulness</td>
+<td align="right">0.4793531</td>
+<td align="right">0.4597488</td>
+<td align="right">0.2915361</td>
+<td align="right">0.6081865</td>
+<td align="right">0.1779279</td>
+</tr>
+</tbody>
+</table>
+<p>IS IT EXCITING YET? No… But let’s make the same graph of the data because I copy and pasted the code, and I might as well stay consistent.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>TEAMS DATA AGAIN!</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>What’s different? What did the blessings do!? I don’t know but it looks like the Firefighters’ chasiness got punched in the face, and the Dale[ACCENT ERROR] is still the most boring set of distributions I’ve seen…</p>
+<p>Holy crap look at that anticapitalism for the Tacos. They got maxed out. Praise the Blaseball Gods.</p>
+<p>AND MORE NUMBERS</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">team</th>
+<th align="left">Stlat</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+<th align="right">Std. Dev.</th>
+<th align="right">CV</th>
+<th align="right">Skew</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4627438</td>
+<td align="right">0.4657024</td>
+<td align="right">0.3289517</td>
+<td align="right">0.7108721</td>
+<td align="right">0.0604500</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">chasiness</td>
+<td align="right">0.3768264</td>
+<td align="right">0.3295325</td>
+<td align="right">0.3204211</td>
+<td align="right">0.8503147</td>
+<td align="right">0.5993580</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">omniscience</td>
+<td align="right">0.3537627</td>
+<td align="right">0.2683630</td>
+<td align="right">0.3280403</td>
+<td align="right">0.9272891</td>
+<td align="right">0.5160515</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5126339</td>
+<td align="right">0.4799804</td>
+<td align="right">0.2726546</td>
+<td align="right">0.5318700</td>
+<td align="right">0.1673924</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4905436</td>
+<td align="right">0.5698160</td>
+<td align="right">0.2866478</td>
+<td align="right">0.5843472</td>
+<td align="right">-0.2992189</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5865952</td>
+<td align="right">0.6370388</td>
+<td align="right">0.2837951</td>
+<td align="right">0.4838005</td>
+<td align="right">-0.1431542</td>
+</tr>
+<tr class="odd">
+<td align="left">Crabs</td>
+<td align="left">chasiness</td>
+<td align="right">0.5301729</td>
+<td align="right">0.5242458</td>
+<td align="right">0.1526183</td>
+<td align="right">0.2878652</td>
+<td align="right">-0.4743889</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">omniscience</td>
+<td align="right">0.6473348</td>
+<td align="right">0.7073562</td>
+<td align="right">0.3884678</td>
+<td align="right">0.6001033</td>
+<td align="right">-0.1469466</td>
+</tr>
+<tr class="odd">
+<td align="left">Crabs</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5829373</td>
+<td align="right">0.5044924</td>
+<td align="right">0.3685620</td>
+<td align="right">0.6322499</td>
+<td align="right">0.0272157</td>
+</tr>
+<tr class="even">
+<td align="left">Crabs</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5234717</td>
+<td align="right">0.5166114</td>
+<td align="right">0.2841827</td>
+<td align="right">0.5428806</td>
+<td align="right">0.0058625</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3731316</td>
+<td align="right">0.3387787</td>
+<td align="right">0.2478423</td>
+<td align="right">0.6642223</td>
+<td align="right">0.1372807</td>
+</tr>
+<tr class="even">
+<td align="left">Dale</td>
+<td align="left">chasiness</td>
+<td align="right">0.4250536</td>
+<td align="right">0.4315548</td>
+<td align="right">0.2621973</td>
+<td align="right">0.6168570</td>
+<td align="right">-0.0766962</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">omniscience</td>
+<td align="right">0.4214213</td>
+<td align="right">0.3973689</td>
+<td align="right">0.3059891</td>
+<td align="right">0.7260884</td>
+<td align="right">0.2438656</td>
+</tr>
+<tr class="even">
+<td align="left">Dale</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4559173</td>
+<td align="right">0.4234648</td>
+<td align="right">0.2722345</td>
+<td align="right">0.5971138</td>
+<td align="right">0.2469650</td>
+</tr>
+<tr class="odd">
+<td align="left">Dale</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4837035</td>
+<td align="right">0.5221185</td>
+<td align="right">0.3569923</td>
+<td align="right">0.7380396</td>
+<td align="right">-0.1010190</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4517997</td>
+<td align="right">0.4432632</td>
+<td align="right">0.3011648</td>
+<td align="right">0.6665892</td>
+<td align="right">0.0502458</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">chasiness</td>
+<td align="right">0.5804227</td>
+<td align="right">0.6156040</td>
+<td align="right">0.2440119</td>
+<td align="right">0.4204038</td>
+<td align="right">-0.5321613</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">omniscience</td>
+<td align="right">0.4261869</td>
+<td align="right">0.3561045</td>
+<td align="right">0.3129745</td>
+<td align="right">0.7343598</td>
+<td align="right">0.4106341</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5447445</td>
+<td align="right">0.5667437</td>
+<td align="right">0.3016215</td>
+<td align="right">0.5536935</td>
+<td align="right">-0.1505008</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4018940</td>
+<td align="right">0.3898984</td>
+<td align="right">0.1947373</td>
+<td align="right">0.4845489</td>
+<td align="right">0.0304242</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4628304</td>
+<td align="right">0.3649425</td>
+<td align="right">0.2507988</td>
+<td align="right">0.5418805</td>
+<td align="right">0.2458171</td>
+</tr>
+<tr class="even">
+<td align="left">Flowers</td>
+<td align="left">chasiness</td>
+<td align="right">0.4408037</td>
+<td align="right">0.3739497</td>
+<td align="right">0.2573872</td>
+<td align="right">0.5839044</td>
+<td align="right">0.8940105</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">omniscience</td>
+<td align="right">0.5774146</td>
+<td align="right">0.6222510</td>
+<td align="right">0.2749845</td>
+<td align="right">0.4762340</td>
+<td align="right">-0.3323041</td>
+</tr>
+<tr class="even">
+<td align="left">Flowers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4737641</td>
+<td align="right">0.4445346</td>
+<td align="right">0.3443009</td>
+<td align="right">0.7267349</td>
+<td align="right">0.0459455</td>
+</tr>
+<tr class="odd">
+<td align="left">Flowers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4522328</td>
+<td align="right">0.4441844</td>
+<td align="right">0.3199718</td>
+<td align="right">0.7075379</td>
+<td align="right">0.2529272</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5101125</td>
+<td align="right">0.5153098</td>
+<td align="right">0.2458238</td>
+<td align="right">0.4819012</td>
+<td align="right">-0.0310397</td>
+</tr>
+<tr class="odd">
+<td align="left">Fridays</td>
+<td align="left">chasiness</td>
+<td align="right">0.4105390</td>
+<td align="right">0.3243951</td>
+<td align="right">0.3231506</td>
+<td align="right">0.7871374</td>
+<td align="right">0.4970563</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">omniscience</td>
+<td align="right">0.4339885</td>
+<td align="right">0.4851602</td>
+<td align="right">0.2959862</td>
+<td align="right">0.6820137</td>
+<td align="right">0.0051201</td>
+</tr>
+<tr class="odd">
+<td align="left">Fridays</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5155130</td>
+<td align="right">0.4256691</td>
+<td align="right">0.2900275</td>
+<td align="right">0.5625997</td>
+<td align="right">0.4284760</td>
+</tr>
+<tr class="even">
+<td align="left">Fridays</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4500983</td>
+<td align="right">0.3641108</td>
+<td align="right">0.3108673</td>
+<td align="right">0.6906655</td>
+<td align="right">0.3023248</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4240209</td>
+<td align="right">0.4508044</td>
+<td align="right">0.2884726</td>
+<td align="right">0.6803262</td>
+<td align="right">0.0314172</td>
+</tr>
+<tr class="even">
+<td align="left">Garages</td>
+<td align="left">chasiness</td>
+<td align="right">0.4973159</td>
+<td align="right">0.5369407</td>
+<td align="right">0.2679212</td>
+<td align="right">0.5387345</td>
+<td align="right">-0.1394636</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">omniscience</td>
+<td align="right">0.5645431</td>
+<td align="right">0.5399343</td>
+<td align="right">0.3300986</td>
+<td align="right">0.5847181</td>
+<td align="right">-0.0444719</td>
+</tr>
+<tr class="even">
+<td align="left">Garages</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4963738</td>
+<td align="right">0.4365298</td>
+<td align="right">0.3186250</td>
+<td align="right">0.6419053</td>
+<td align="right">0.0885326</td>
+</tr>
+<tr class="odd">
+<td align="left">Garages</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4765438</td>
+<td align="right">0.4236365</td>
+<td align="right">0.3098236</td>
+<td align="right">0.6501473</td>
+<td align="right">0.1750700</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3857681</td>
+<td align="right">0.3308927</td>
+<td align="right">0.2805922</td>
+<td align="right">0.7273597</td>
+<td align="right">0.5206113</td>
+</tr>
+<tr class="odd">
+<td align="left">Jazz Hands</td>
+<td align="left">chasiness</td>
+<td align="right">0.6251920</td>
+<td align="right">0.7264935</td>
+<td align="right">0.2792008</td>
+<td align="right">0.4465840</td>
+<td align="right">-0.6930604</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">omniscience</td>
+<td align="right">0.4390531</td>
+<td align="right">0.4497790</td>
+<td align="right">0.3634437</td>
+<td align="right">0.8277899</td>
+<td align="right">0.0170892</td>
+</tr>
+<tr class="odd">
+<td align="left">Jazz Hands</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5378237</td>
+<td align="right">0.5568637</td>
+<td align="right">0.2686430</td>
+<td align="right">0.4995001</td>
+<td align="right">-0.2166518</td>
+</tr>
+<tr class="even">
+<td align="left">Jazz Hands</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5154483</td>
+<td align="right">0.5500311</td>
+<td align="right">0.2102776</td>
+<td align="right">0.4079509</td>
+<td align="right">-0.6880679</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5661568</td>
+<td align="right">0.5932398</td>
+<td align="right">0.2511247</td>
+<td align="right">0.4435603</td>
+<td align="right">-0.1077985</td>
+</tr>
+<tr class="even">
+<td align="left">Lovers</td>
+<td align="left">chasiness</td>
+<td align="right">0.5588600</td>
+<td align="right">0.5177308</td>
+<td align="right">0.2758491</td>
+<td align="right">0.4935925</td>
+<td align="right">-0.0456296</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">omniscience</td>
+<td align="right">0.5490002</td>
+<td align="right">0.5346924</td>
+<td align="right">0.3172285</td>
+<td align="right">0.5778295</td>
+<td align="right">0.1759853</td>
+</tr>
+<tr class="even">
+<td align="left">Lovers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6284434</td>
+<td align="right">0.7236178</td>
+<td align="right">0.3426001</td>
+<td align="right">0.5451566</td>
+<td align="right">-0.6960243</td>
+</tr>
+<tr class="odd">
+<td align="left">Lovers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5049051</td>
+<td align="right">0.4398743</td>
+<td align="right">0.2536488</td>
+<td align="right">0.5023692</td>
+<td align="right">0.5289100</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.6026119</td>
+<td align="right">0.6521560</td>
+<td align="right">0.2745343</td>
+<td align="right">0.4555740</td>
+<td align="right">-0.3964286</td>
+</tr>
+<tr class="odd">
+<td align="left">Magic</td>
+<td align="left">chasiness</td>
+<td align="right">0.5443875</td>
+<td align="right">0.5374024</td>
+<td align="right">0.2821661</td>
+<td align="right">0.5183185</td>
+<td align="right">0.0284304</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">omniscience</td>
+<td align="right">0.4467380</td>
+<td align="right">0.4379017</td>
+<td align="right">0.2791912</td>
+<td align="right">0.6249551</td>
+<td align="right">0.0041282</td>
+</tr>
+<tr class="odd">
+<td align="left">Magic</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5838722</td>
+<td align="right">0.6676153</td>
+<td align="right">0.2641354</td>
+<td align="right">0.4523857</td>
+<td align="right">-0.2452459</td>
+</tr>
+<tr class="even">
+<td align="left">Magic</td>
+<td align="left">watchfulness</td>
+<td align="right">0.6008025</td>
+<td align="right">0.6662076</td>
+<td align="right">0.2761483</td>
+<td align="right">0.4596325</td>
+<td align="right">-0.5372048</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5063591</td>
+<td align="right">0.4795331</td>
+<td align="right">0.3182283</td>
+<td align="right">0.6284637</td>
+<td align="right">0.5765196</td>
+</tr>
+<tr class="even">
+<td align="left">Millennials</td>
+<td align="left">chasiness</td>
+<td align="right">0.6661085</td>
+<td align="right">0.7897462</td>
+<td align="right">0.2799834</td>
+<td align="right">0.4203269</td>
+<td align="right">-0.8175586</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">omniscience</td>
+<td align="right">0.3731118</td>
+<td align="right">0.3073098</td>
+<td align="right">0.3052185</td>
+<td align="right">0.8180351</td>
+<td align="right">0.6809273</td>
+</tr>
+<tr class="even">
+<td align="left">Millennials</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6142675</td>
+<td align="right">0.7106785</td>
+<td align="right">0.3286062</td>
+<td align="right">0.5349562</td>
+<td align="right">-0.4837472</td>
+</tr>
+<tr class="odd">
+<td align="left">Millennials</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4614770</td>
+<td align="right">0.4664855</td>
+<td align="right">0.3432358</td>
+<td align="right">0.7437766</td>
+<td align="right">0.0608211</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3851771</td>
+<td align="right">0.2031867</td>
+<td align="right">0.3235668</td>
+<td align="right">0.8400468</td>
+<td align="right">0.7033105</td>
+</tr>
+<tr class="odd">
+<td align="left">Moist Talkers</td>
+<td align="left">chasiness</td>
+<td align="right">0.6294982</td>
+<td align="right">0.6054889</td>
+<td align="right">0.2884321</td>
+<td align="right">0.4581936</td>
+<td align="right">-0.1216490</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">omniscience</td>
+<td align="right">0.4023112</td>
+<td align="right">0.3976413</td>
+<td align="right">0.2937358</td>
+<td align="right">0.7301210</td>
+<td align="right">-0.0132128</td>
+</tr>
+<tr class="odd">
+<td align="left">Moist Talkers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.6484181</td>
+<td align="right">0.6367718</td>
+<td align="right">0.2797679</td>
+<td align="right">0.4314621</td>
+<td align="right">-0.3910551</td>
+</tr>
+<tr class="even">
+<td align="left">Moist Talkers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4495096</td>
+<td align="right">0.4848952</td>
+<td align="right">0.2712156</td>
+<td align="right">0.6033589</td>
+<td align="right">0.2602166</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.7546549</td>
+<td align="right">0.8273789</td>
+<td align="right">0.3114611</td>
+<td align="right">0.4127199</td>
+<td align="right">-0.2988399</td>
+</tr>
+<tr class="even">
+<td align="left">Pies</td>
+<td align="left">chasiness</td>
+<td align="right">0.7404004</td>
+<td align="right">0.7395118</td>
+<td align="right">0.2725409</td>
+<td align="right">0.3680993</td>
+<td align="right">-0.0188648</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">omniscience</td>
+<td align="right">0.6283096</td>
+<td align="right">0.6175095</td>
+<td align="right">0.3321759</td>
+<td align="right">0.5286818</td>
+<td align="right">0.1020152</td>
+</tr>
+<tr class="even">
+<td align="left">Pies</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5978504</td>
+<td align="right">0.5881310</td>
+<td align="right">0.2383529</td>
+<td align="right">0.3986832</td>
+<td align="right">0.4191913</td>
+</tr>
+<tr class="odd">
+<td align="left">Pies</td>
+<td align="left">watchfulness</td>
+<td align="right">0.6591560</td>
+<td align="right">0.7234512</td>
+<td align="right">0.3156489</td>
+<td align="right">0.4788682</td>
+<td align="right">-0.0966565</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4192364</td>
+<td align="right">0.3163904</td>
+<td align="right">0.3093897</td>
+<td align="right">0.7379837</td>
+<td align="right">0.5214326</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoe Thieves</td>
+<td align="left">chasiness</td>
+<td align="right">0.5404362</td>
+<td align="right">0.5315368</td>
+<td align="right">0.2542957</td>
+<td align="right">0.4705378</td>
+<td align="right">0.1039233</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">omniscience</td>
+<td align="right">0.4660923</td>
+<td align="right">0.4946322</td>
+<td align="right">0.2717837</td>
+<td align="right">0.5831113</td>
+<td align="right">-0.0600397</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoe Thieves</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5178678</td>
+<td align="right">0.5531788</td>
+<td align="right">0.2710612</td>
+<td align="right">0.5234177</td>
+<td align="right">0.1391021</td>
+</tr>
+<tr class="even">
+<td align="left">Shoe Thieves</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4591609</td>
+<td align="right">0.3517944</td>
+<td align="right">0.3504286</td>
+<td align="right">0.7631935</td>
+<td align="right">0.5466318</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4459065</td>
+<td align="right">0.3563817</td>
+<td align="right">0.2808998</td>
+<td align="right">0.6299521</td>
+<td align="right">0.2842880</td>
+</tr>
+<tr class="even">
+<td align="left">Spies</td>
+<td align="left">chasiness</td>
+<td align="right">0.5402405</td>
+<td align="right">0.5850106</td>
+<td align="right">0.3180797</td>
+<td align="right">0.5887743</td>
+<td align="right">-0.3219896</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">omniscience</td>
+<td align="right">0.5032657</td>
+<td align="right">0.5669464</td>
+<td align="right">0.2489390</td>
+<td align="right">0.4946472</td>
+<td align="right">-0.3226793</td>
+</tr>
+<tr class="even">
+<td align="left">Spies</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4830830</td>
+<td align="right">0.4588452</td>
+<td align="right">0.2388535</td>
+<td align="right">0.4944357</td>
+<td align="right">-0.0606855</td>
+</tr>
+<tr class="odd">
+<td align="left">Spies</td>
+<td align="left">watchfulness</td>
+<td align="right">0.3474177</td>
+<td align="right">0.2556443</td>
+<td align="right">0.3070008</td>
+<td align="right">0.8836648</td>
+<td align="right">0.3012475</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5029395</td>
+<td align="right">0.4692780</td>
+<td align="right">0.2867820</td>
+<td align="right">0.5702118</td>
+<td align="right">0.0996679</td>
+</tr>
+<tr class="odd">
+<td align="left">Steaks</td>
+<td align="left">chasiness</td>
+<td align="right">0.5607392</td>
+<td align="right">0.5765053</td>
+<td align="right">0.2745817</td>
+<td align="right">0.4896780</td>
+<td align="right">-0.5497725</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">omniscience</td>
+<td align="right">0.6524358</td>
+<td align="right">0.8418075</td>
+<td align="right">0.3378799</td>
+<td align="right">0.5178746</td>
+<td align="right">-0.6812493</td>
+</tr>
+<tr class="odd">
+<td align="left">Steaks</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4950491</td>
+<td align="right">0.4934436</td>
+<td align="right">0.3291055</td>
+<td align="right">0.6647937</td>
+<td align="right">0.3091583</td>
+</tr>
+<tr class="even">
+<td align="left">Steaks</td>
+<td align="left">watchfulness</td>
+<td align="right">0.3843145</td>
+<td align="right">0.3277542</td>
+<td align="right">0.2881429</td>
+<td align="right">0.7497581</td>
+<td align="right">0.4326161</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.4959079</td>
+<td align="right">0.3472951</td>
+<td align="right">0.3195875</td>
+<td align="right">0.6444494</td>
+<td align="right">0.1877864</td>
+</tr>
+<tr class="even">
+<td align="left">Sunbeams</td>
+<td align="left">chasiness</td>
+<td align="right">0.4541614</td>
+<td align="right">0.4491326</td>
+<td align="right">0.1913404</td>
+<td align="right">0.4213049</td>
+<td align="right">0.2774299</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">omniscience</td>
+<td align="right">0.4951642</td>
+<td align="right">0.4633976</td>
+<td align="right">0.3425742</td>
+<td align="right">0.6918396</td>
+<td align="right">0.0631101</td>
+</tr>
+<tr class="even">
+<td align="left">Sunbeams</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5252013</td>
+<td align="right">0.5056566</td>
+<td align="right">0.2547300</td>
+<td align="right">0.4850141</td>
+<td align="right">0.1761893</td>
+</tr>
+<tr class="odd">
+<td align="left">Sunbeams</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5551209</td>
+<td align="right">0.4982756</td>
+<td align="right">0.3298833</td>
+<td align="right">0.5942549</td>
+<td align="right">0.1329672</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.3922257</td>
+<td align="right">0.3847157</td>
+<td align="right">0.2730325</td>
+<td align="right">0.6961107</td>
+<td align="right">0.1708833</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">chasiness</td>
+<td align="right">0.3329606</td>
+<td align="right">0.2269368</td>
+<td align="right">0.2729953</td>
+<td align="right">0.8199027</td>
+<td align="right">0.7659452</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">omniscience</td>
+<td align="right">0.5059029</td>
+<td align="right">0.5330355</td>
+<td align="right">0.2673339</td>
+<td align="right">0.5284292</td>
+<td align="right">-0.5178149</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.5025965</td>
+<td align="right">0.5073152</td>
+<td align="right">0.3224187</td>
+<td align="right">0.6415061</td>
+<td align="right">-0.2242328</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4107530</td>
+<td align="right">0.4112978</td>
+<td align="right">0.2228577</td>
+<td align="right">0.5425589</td>
+<td align="right">0.0588774</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.5599191</td>
+<td align="right">0.5127639</td>
+<td align="right">0.2274826</td>
+<td align="right">0.4062777</td>
+<td align="right">0.2320806</td>
+</tr>
+<tr class="even">
+<td align="left">Tigers</td>
+<td align="left">chasiness</td>
+<td align="right">0.4709423</td>
+<td align="right">0.5423329</td>
+<td align="right">0.2370573</td>
+<td align="right">0.5033681</td>
+<td align="right">-0.2762458</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">omniscience</td>
+<td align="right">0.4210158</td>
+<td align="right">0.4362219</td>
+<td align="right">0.1873253</td>
+<td align="right">0.4449365</td>
+<td align="right">0.0745264</td>
+</tr>
+<tr class="even">
+<td align="left">Tigers</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.3603748</td>
+<td align="right">0.3303539</td>
+<td align="right">0.1750273</td>
+<td align="right">0.4856812</td>
+<td align="right">0.2191015</td>
+</tr>
+<tr class="odd">
+<td align="left">Tigers</td>
+<td align="left">watchfulness</td>
+<td align="right">0.5074445</td>
+<td align="right">0.4055595</td>
+<td align="right">0.2909860</td>
+<td align="right">0.5734341</td>
+<td align="right">0.3715548</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.6303408</td>
+<td align="right">0.7101705</td>
+<td align="right">0.3001300</td>
+<td align="right">0.4761393</td>
+<td align="right">-0.6091481</td>
+</tr>
+<tr class="odd">
+<td align="left">Wild Wings</td>
+<td align="left">chasiness</td>
+<td align="right">0.4896707</td>
+<td align="right">0.4591720</td>
+<td align="right">0.3146680</td>
+<td align="right">0.6426114</td>
+<td align="right">0.1216734</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">omniscience</td>
+<td align="right">0.5385562</td>
+<td align="right">0.6257964</td>
+<td align="right">0.3280785</td>
+<td align="right">0.6091815</td>
+<td align="right">-0.2132406</td>
+</tr>
+<tr class="odd">
+<td align="left">Wild Wings</td>
+<td align="left">tenaciousness</td>
+<td align="right">0.4722375</td>
+<td align="right">0.5140176</td>
+<td align="right">0.2661355</td>
+<td align="right">0.5635629</td>
+<td align="right">-0.3192785</td>
+</tr>
+<tr class="even">
+<td align="left">Wild Wings</td>
+<td align="left">watchfulness</td>
+<td align="right">0.4530643</td>
+<td align="right">0.4127228</td>
+<td align="right">0.2746418</td>
+<td align="right">0.6061872</td>
+<td align="right">0.3249747</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="the-difference" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> THE DIFFERENCE</h3>
+<p>Alright… So we get to the end of this season. What happened…</p>
+<p>Well changes are pretty sparse. Perhaps we can look at just the players that changed.</p>
+<p>That’s not such a bad table. People seem to really care about their teams and players, so check it out, I guess. I don’t know.</p>
+<p>As we can see, the Breath Mints got an all around boost. How lucky.</p>
+<p>Same for the fire fighters. Except Axel Trololol (that meme should stay dead) got a boost almost double that of his fellow teammates. Perhaps he took extra from the stash of blessing. Selfish punk.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="19%" />
+<col width="15%" />
+<col width="10%" />
+<col width="12%" />
+<col width="14%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">team</th>
+<th align="left">name</th>
+<th align="right">anticapitalism</th>
+<th align="right">chasiness</th>
+<th align="right">omniscience</th>
+<th align="right">tenaciousness</th>
+<th align="right">watchfulness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Hewitt Best</td>
+<td align="right">0.1499995</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Dickerson Morse</td>
+<td align="right">0.1499999</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Whit Steakknife</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500001</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Grey Alvarado</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1499999</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Rodriguez Internet</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Eizabeth Guerra</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1499999</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Eduardo Ingram</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Boyfriend Monreal</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1499999</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Marquez Clark</td>
+<td align="right">0.1499999</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1499997</td>
+<td align="right">0.1499998</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Leach Ingram</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500001</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">Oscar Vaughan</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500004</td>
+<td align="right">0.1500000</td>
+</tr>
+<tr class="even">
+<td align="left">Breath Mints</td>
+<td align="left">Winnie Hess</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500001</td>
+<td align="right">0.1500001</td>
+</tr>
+<tr class="odd">
+<td align="left">Breath Mints</td>
+<td align="left">PolkaDot Zavala</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1500000</td>
+<td align="right">0.1499999</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Paula Mason</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Declan Suzanne</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Joshua Butt</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Isaac Johnson</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800002</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Edric Tosser</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800001</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Rivers Rosa</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Baby Urlacher</td>
+<td align="right">0.0800001</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800001</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Lou Roseheart</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800002</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Wesley Poole</td>
+<td align="right">0.0799998</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800004</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Caleb Alvarado</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0799999</td>
+<td align="right">0.0800002</td>
+<td align="right">0.0800004</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Justice Spoon</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Axel Trololol</td>
+<td align="right">0.2300000</td>
+<td align="right">0.2300001</td>
+<td align="right">0.2300000</td>
+<td align="right">0.2300001</td>
+<td align="right">0.2299996</td>
+</tr>
+<tr class="even">
+<td align="left">Firefighters</td>
+<td align="left">Swamuel Mora</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="odd">
+<td align="left">Firefighters</td>
+<td align="left">Mullen Peterson</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800001</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+<td align="right">0.0800000</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 1</td>
+<td align="right">0.8947002</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 2</td>
+<td align="right">0.4071883</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 3</td>
+<td align="right">0.6258739</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 4</td>
+<td align="right">0.5300134</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 5</td>
+<td align="right">0.6046948</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 6</td>
+<td align="right">0.2047457</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 7</td>
+<td align="right">0.1640975</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 8</td>
+<td align="right">0.4638072</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 9</td>
+<td align="right">0.3066297</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 10</td>
+<td align="right">0.9969923</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 11</td>
+<td align="right">0.8275950</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 12</td>
+<td align="right">0.7543052</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 13</td>
+<td align="right">0.9556940</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">Wyatt Mason 14</td>
+<td align="right">0.7725032</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<p>Really, the only changes of interest are the Tacos.
+1. They are all now Wyatt Mason. (I’m not holding on to those ID variables so you can sort out who it is if you want.)
+2. They all got their anticaptialism maxed out to 1.</p>
+<p>Here are the summary stats. But they are pretty useless. There really isn’t randomness involved in pinning a value to 1. Regardless, here are the changes.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">team</th>
+<th align="left">Stlat</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+<th align="right">Std. Dev.</th>
+<th align="right">CV</th>
+<th align="right">Skew</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tacos</td>
+<td align="left">anticapitalism</td>
+<td align="right">0.61</td>
+<td align="right">0.62</td>
+<td align="right">0.27</td>
+<td align="right">0.45</td>
+<td align="right">-0.17</td>
+</tr>
+</tbody>
+</table>
+<p>If we were to make a graph of the changes. They would align perfectly with the pre-election results. Here is a useless visual demonstration.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Wyatt Mason (7?) on the far right there really hated capitalism I guess. Too bad the players points of views don’t matter. The Blaseball Gods do not care for such things as opinions.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
